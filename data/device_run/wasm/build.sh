@@ -1,0 +1,1 @@
+rustc --target=wasm32-unknown-unknown sample.rs -C opt-level=3 -C panic=abort -C debuginfo=0 -C strip=symbols
