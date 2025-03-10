@@ -1,0 +1,37 @@
+{
+    "optimized": {
+        "word": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+        ],
+        "cost": 1,
+        "time": 2.86102294921875e-06,
+        "method": "none",
+        "steps": 100,
+        "cyclic": true
+    },
+    "original": {
+        "word": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+        ],
+        "cost": 1
+    },
+    "source": {
+        "method": "word",
+        "word": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+        ]
+    },
+    "jones": null
+}

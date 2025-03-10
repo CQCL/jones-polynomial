@@ -1,0 +1,56 @@
+{   
+    "qubits": 100,
+    "spam": {
+        "prepare": 1e-5,
+        "measure": {
+            "zero": 1e-4,
+            "one": 1e-4
+        }
+    },
+    "gates": {
+        "U1q": {
+            "qubits": 1,
+            "params": 2,
+            "error": {
+                "rate": 1e-5,
+                "channel": "depolarizing"
+            },
+            "unitary": {
+                "code": "[[cos(a/2),-1j*exp(-1j*b)*sin(a/2)],[-1j*exp(1j*b)*sin(a/2),cos(a/2)]]"
+            }
+        },
+        "Rz": {
+            "params": 1,
+            "qubits": 1,
+            "unitary": {
+                "code": "[[exp(-1j*a/2), 0], [0, exp(1j*a/2)]]"
+            }
+        },
+        "RZZ": {
+            "params": 1,
+            "qubits": 2,
+            "error": {
+                "rate": 1e-4,
+                "channel": "depolarizing"
+            },
+            "unitary": {
+                "code": "[[exp(-1j*a/2), 0, 0, 0],[0,exp(1j*a/2),0,0],[0,0,exp(1j*a/2),0],[0,0,0,exp(-1j*a/2)]]"
+            }
+        }
+    },
+    "connectivity": "all",
+    "cnot_recipe": [
+        ["U1q", [1], [-1.5707963, 1.5707963]],
+        ["RZZ", [0, 1], [1.5707963]],
+        ["Rz", [0], [-1.5707963]],
+        ["U1q", [1], [1.5707963, 3.14159265]],
+        ["Rz", [1], [-1.5707963]]
+    ],
+    "hadamard_recipe": [
+        ["U1q", [0], [1.5707963, -1.5707963]],
+        ["Rz", [0], [3.14159265]]
+    ],
+    "rz_recipe": [
+        ["Rz", [0], [{ "code":  "a" }]]
+    ]
+}
