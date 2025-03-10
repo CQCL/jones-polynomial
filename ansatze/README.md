@@ -1,0 +1,1 @@
+To specify an ansatze file for a particular architecture, write your ansatze in OpenQASM 2 with opaque gate definitions for each native gate, and set all parameters to zero. These will be variationally optimized over to approximate the braid generator unitary. See `quantinuum.qasm` for an example.

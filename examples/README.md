@@ -1,0 +1,1 @@
+The JSON files in the `braids` folder are braid representatives generated using `generate.py` for all knots with at most seven crossings, taken from the [Knot Atlas](https://katlas.org/wiki/Main_Page).

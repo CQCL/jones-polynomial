@@ -283,7 +283,6 @@ if __name__ == "__main__":
     shot_outputs = inject_measurement_errors(spec, shot_outputs, args.scale)
 
     np.save(out_file, shot_outputs)
-    np.save(out_file.with_suffix(".cbits.npy"), actual_cbits)
     print(f"wrote shot values of shape {shot_outputs.shape} to `{out_file}`")
     if args.expval:
         np.save(out_file.with_suffix('.exp.npy'), expval_outputs)

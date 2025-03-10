@@ -106,7 +106,7 @@ def process_braid(val):
     return idx, nbraid
 
 if __name__ == "__main__":
-    braids = pickle.load(open("../raw_data_braids_n10_29_l5_50_c50.pkl", "rb"))
+    braids = pickle.load(open("../raw_data/braids_n10_29_l5_50_c50.pkl", "rb"))
     os.mkdir('exact_tensor_costs_outputs')
     for val in list(enumerate(braids))[procid::processes][::-1]:
         idx, nbraid = process_braid(val)
